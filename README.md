@@ -1,6 +1,8 @@
 # Roblox slot insertion
  This is a Roblox script which allows users to insert their own slots using a GUI.
 
+ For the RBXM file, go download the [SlotInserter.rbxm file](https://github.com/Hypurrnating/Roblox-slot-insertion/blob/main/SlotInserter.rbxm). If you wish to suggest improve meants to the code, you can create a pull request and edit the .lua scripts in /src
+
  The script creates a record of what models where insert by who and when in a lua table. It then uses that data to set a cool-down (or debounce) on each player. \
  The script also logs the insert to a discord webhook, although you should also specify a guilded webhook as fallback (will be introduced later).
 
