@@ -1,5 +1,6 @@
 # Roblox slot insertion
- This is a Roblox script which allows users to insert their own slots using a GUI.
+ This is a Roblox script which allows users to insert their own slots using a GUI. \
+ Shoutout to `outrun917` and `sjark` for the original GUI, scripts, and idea.
 
  For the RBXM file, go download the [SlotInserter.rbxm file](https://github.com/Hypurrnating/Roblox-slot-insertion/raw/main/SlotInserter.rbxm). If you wish to suggest improve meants to the code, you can create a pull request and edit the .lua scripts in /src
 
