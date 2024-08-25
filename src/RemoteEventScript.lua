@@ -9,11 +9,12 @@ local post_url = ''
 
 script.Parent.ModelInsertFire.OnServerEvent:Connect(function(Player, ModelID)	
 	-- Get the users spawn history
+	local now_utc = DateTime.now().UnixTimestamp
 	local record = records[Player.UserId]
 	if record then
 		-- Iterate over all spawns, and if spawning too quickly, ignore
 		for utc, model in pairs(record) do
-			if utc > (DateTime.now().UnixTimestamp - debounce) then
+			if utc > (now_utc - debounce) then
 				print('Bouncing')
 				return
 			end
@@ -24,19 +25,19 @@ script.Parent.ModelInsertFire.OnServerEvent:Connect(function(Player, ModelID)
 	end
 
 	-- Append to the users spawn history
-	records[Player.UserId][DateTime.now().UnixTimestamp] = ModelID
+	records[Player.UserId][now_utc] = ModelID
 	-- Load model into game
 	local success, Asset = pcall(InsertService.LoadAsset, InsertService, ModelID)
 	if success and Asset then
 		Asset.Parent = workspace
 		Asset:MoveTo(Player.Character.HumanoidRootPart.Position + Vector3.new(5, 0, 0))
 	else
-		records[Player.UserId][DateTime.now().UnixTimestamp] = nil
+		records[Player.UserId][now_utc] = nil
 	end
 	local Data = {
 		["embeds"] = {{
 			title = tostring(Player.Name .. " Inserted"),
-			description = "UTC at: " .. tostring(DateTime.now().UnixTimestamp),
+			description = "UTC at: " .. tostring(now_utc),
 			footer = {
 				text = "These are just notifications, and are not necessarily hard proof."
 			},
