@@ -4,8 +4,8 @@ local InsertService = game:GetService("InsertService")
 local records = {}
 
 local debounce = 10
-local guilded_post_url = 'https://media.guilded.gg/webhooks/984e54ed-7ad2-4539-91de-529b53ca454a/7p8tk1wyNaOqKs6e6eO8Wmmo8yMSCk6Ag4aqQae0YOWMyEIKy4IQ8YKeu8iw6geIOiOAwoAC8eOqQauU4qIess'
-local post_url = 'https://discord.com/api/webhooks/1277254313760002089/aue5b4OkIO6lMDBPo8j4UgoM0HKlz1XNGJwrNwsXz4-QK44R9nDEhpCb1Hu5QM9yI9ta'
+local guilded_post_url = ''
+local post_url = ''
 
 script.Parent.ModelInsertFire.OnServerEvent:Connect(function(Player, ModelID)	
 	-- Get the users spawn history
