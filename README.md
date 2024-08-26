@@ -1,6 +1,16 @@
 # Hot slot inserter
  This is a Roblox script which allows users to insert their own slots using a GUI. \
  Shoutout to `outrun917` and `sjark` for the original GUI, scripts, and idea.
+ 
+ ---
+ 
+ ### Archival
+ This script might still be useful to some people out there, which is why it's still available.\
+ However this project is a bit of a dead end. I will not be making any additions to this, so long as Roblox doesn't make any changes to the engine.
+
+ [Read more here](https://gist.github.com/Hypurrnating/03f3b4401d4e67a133a4877f8644f8ed)
+
+ ---
 
 [![Static Badge](https://img.shields.io/badge/download_rbxm-here?style=for-the-badge&color=blue)](https://github.com/Hypurrnating/Roblox-slot-inserter/raw/main/inserter.rbxm) \
 If you wish to suggest improvements to the code, you can create a pull request and edit the .lua scripts in /src
@@ -103,3 +113,4 @@ If you wish to suggest improvements to the code, you can create a pull request a
  - How can we tell which descendant is a Model added by InsertService
  - And which descendant has been added by *this* script
    - A simple attribute might not cut it, since those can be added by the trojan script as well
+ - The exact moment at which game.DescendantsAdded is fired is unclear. I believe it to be *after* the model has finished loading. This is a problem because by that time, it could have done whatever it wanted (perhaps attaching scripts across the entire game)
