@@ -25,8 +25,8 @@ If you wish to suggest improvements to the code, you can create a pull request a
  One folder is called `sendToServerScriptService` and the other is called `sendToReplicatedStorage`. Now move the contents of those folders to where they belong.
 
  ### 3: Setup webhooks
- Now you need to open the `RemoteEventScript`, which you should have already moved to the ServerScriptService.
- When you open the file, you will notice a lua table called `post_urls`. Just add your webhook urls to the table.
+ Now you need to open the `RemoteEventScript` file, which you should have already moved to the ServerScriptService.
+ When you open the file, you will notice a table called `post_urls`. Just add your webhook urls to the table.
 
  It's important that you do this whenever you have to update the inserter.
 
