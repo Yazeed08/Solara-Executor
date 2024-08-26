@@ -1,4 +1,4 @@
-# Roblox slot insertion
+# Hot slot inserter
  This is a Roblox script which allows users to insert their own slots using a GUI. \
  Shoutout to `outrun917` and `sjark` for the original GUI, scripts, and idea.
 
