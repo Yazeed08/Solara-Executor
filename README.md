@@ -13,6 +13,7 @@ If you wish to suggest improvements to the code, you can create a pull request a
  
  I do aim to introduce better security features in the future, but as the warning above says, you have to be aware of what you are allowing into the game.
 
+
  ## How to install this to my game?
 
  ### 1: Download the file
@@ -28,7 +29,6 @@ If you wish to suggest improvements to the code, you can create a pull request a
  Now you need to open the `RemoteEventScript` file, which you should have already moved to the ServerScriptService.
  When you open the file, you will notice a table called `post_urls`. Just add your webhook urls to the table.
 
- It's important that you do this whenever you have to update the inserter.
 
  ## Can I change the GUI?
  Yeah just swap it out for anything. As long as the `LocalScript` in the GUI is firing to the correct remote event, with the correct data, it doesn't matter what the GUI looks like.
