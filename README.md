@@ -89,3 +89,17 @@ If you wish to suggest improvements to the code, you can create a pull request a
   You might not always receive `Product` info in the `NewInsert` event.
  
  Both these events are `BindableEvents`, so that means they will only work on server scripts. You can wrap around them if you wish to do something on local scripts.
+
+
+ ## Existing Issues
+ It would be ideal if this script could "lock" InsertService, and act like a kernel. But it cant. \
+ This means that once a asset is inserted, it can act like a trojan horse. 
+ The model inserted may include a script which can give it's owner any privileges. It can provide a custom insert GUI, to bypass this one. It can provide admin tools, or straight up just ban everyone present in the game.
+
+ Unfortunately, there is no way to stop this at runtime.\
+ In Roblox, script content can not be read, unless by a `Studio Plugin`.\
+ Scripts do not have such controlling access to classes such as InsertService.\
+ And `game.DescendantsAdded`, is the most promising, but has multiple problems:
+ - How can we tell which descendant is a Model added by InsertService
+ - And which descendant has been added by *this* script
+   - A simple attribute might not cut it, since those can be added by the trojan script as well
