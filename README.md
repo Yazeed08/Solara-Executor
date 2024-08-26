@@ -98,7 +98,7 @@ If you wish to suggest improvements to the code, you can create a pull request a
 
  Unfortunately, there is no way to stop this at runtime.\
  In Roblox, script content can not be read, unless by a `Studio Plugin`.\
- Scripts do not have such controlling access to classes such as InsertService.\
+ Scripts do not have the kind of controlling access needed on classes such as InsertService.\
  And `game.DescendantsAdded`, is the most promising, but has multiple problems:
  - How can we tell which descendant is a Model added by InsertService
  - And which descendant has been added by *this* script
