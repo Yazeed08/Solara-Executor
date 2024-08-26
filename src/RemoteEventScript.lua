@@ -64,7 +64,7 @@ local function constructWebhookData(Player: Player, ModelID: string, asset)
 					value = tostring(asset.Creator.CreatorTargetId) or "nil",
 					inline = true
 				},
-				{name = '__Player/Inserter Info__', value = " ", inline = false},
+				{name = '__Inserted by/Player Info__', value = " ", inline = false},
 				{
 					name = 'Player ID',
 					value =tostring(Player.UserId) or "nil",
